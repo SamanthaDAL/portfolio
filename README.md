@@ -1,32 +1,20 @@
-# React + TypeScript + Vite
+# Samantha_portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Single-page responsive Next.js portfolio.
 
-Currently, two official plugins are available:
+## Project interaction
+Samantha uses a different spotlight composition:
+- current project is large and centered
+- Previous and Next are smaller supporting cards positioned lower left/right
+- side previews show label, project name and short context
+- Personal and University categories can contain any number of projects
+- categories with only one project automatically remove Previous/Next controls
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Navigation
+The navigation is fixed at the top and remains visible throughout the long Projects section. Active-section tracking is based on scroll position.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Run
+```bash
+npm install
+npm run dev
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

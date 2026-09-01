@@ -45,12 +45,19 @@ export const projects: Project[] = [
     status: "placeholder",
   },
   {
-    title: "Mobile App Final Year Project",
+    title: "TeleCardio",
     category: "fyp",
     summary:
-      "The real FYP problem, contribution, screenshots and technology will replace this placeholder.",
-    stack: ["[Actual mobile stack]"],
-    status: "placeholder",
+      "A cardiovascular-focused telemedicine mobile application that supports health monitoring, cardiovascular risk assessment, appointment and video consultation workflows, medication management, and pharmacy access.",
+    stack: [
+      "Flutter",
+      "Dart",
+      "Firebase Firestore",
+      "Firebase Authentication",
+      "Firebase Storage",
+    ],
+    status: "complete",
+    featured: true,
   },
   {
     title: "University Project A",

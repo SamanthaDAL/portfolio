@@ -8,6 +8,8 @@ import {
   type ProjectCategory,
 } from "@/data/projects";
 
+import SamanthaFypImplementation from "./SamanthaFypImplementation";
+
 const order: ProjectCategory[] = [
   "personal-portfolio",
   "internship",
@@ -106,52 +108,75 @@ export default function SamanthaProjectSpotlight({
           </button>
         )}
 
-        <article className="samSpotlightCurrent">
-          <div className="samSpotlightVisual">
-            <div className="samSpotlightWindow">
-              <div className="samSpotlightWindowBar">
-                <i />
-                <i />
-                <i />
-                <span>PROJECT PREVIEW</span>
-              </div>
-              <div className="samSpotlightWindowBody">
-                <div className="samSpotlightSidebar">
+        <article
+          className={`samSpotlightCurrent ${current.category === "fyp"
+              ? "samSpotlightCurrentFyp"
+              : ""
+            }`}
+        >
+          {current.category !== "fyp" && (
+            <div className="samSpotlightVisual">
+              <div className="samSpotlightWindow">
+                <div className="samSpotlightWindowBar">
                   <i />
                   <i />
                   <i />
+                  <span>PROJECT PREVIEW</span>
                 </div>
-                <div className="samSpotlightMain">
-                  <b />
-                  <b />
-                  <div>
-                    <span />
-                    <span />
+
+                <div className="samSpotlightWindowBody">
+                  <div className="samSpotlightSidebar">
+                    <i />
+                    <i />
+                    <i />
+                  </div>
+
+                  <div className="samSpotlightMain">
+                    <b />
+                    <b />
+
+                    <div>
+                      <span />
+                      <span />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
 
           <div className="samSpotlightCopy">
             <div className="samSpotlightMeta">
               <span>{group.label}</span>
+
               <small>
                 {String(currentIndex + 1).padStart(2, "0")} /{" "}
                 {String(items.length).padStart(2, "0")}
               </small>
             </div>
+
             <h3>{current.title}</h3>
+
             <p>{current.summary}</p>
+
             <div className="samTags">
               {current.stack.map((item) => (
                 <span key={item}>{item}</span>
               ))}
             </div>
-            <div className="samSpotlightFooter">
-              <span>Case study, screenshots and links will be added later.</span>
-            </div>
           </div>
+
+          {current.category === "fyp" && (
+            <SamanthaFypImplementation />
+          )}
+
+          {current.category !== "fyp" && (
+            <div className="samSpotlightFooter">
+              <span>
+                Case study, screenshots and links will be added later.
+              </span>
+            </div>
+          )}
         </article>
 
         {items.length > 1 && (

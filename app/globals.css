@@ -2607,3 +2607,878 @@ body {
   padding-right: clamp(24px, 4vw, 52px);
   padding-bottom: clamp(38px, 5vw, 64px);
 }
+
+/* =========================================================
+   PUBLIC TRANSPORT — INTERNSHIP PROJECT
+   ========================================================= */
+
+.samTransport {
+  margin-top: 52px;
+  padding-top: 42px;
+
+  border-top: 1px solid rgba(20, 33, 46, 0.1);
+}
+
+
+/* HEADER */
+
+.samTransportHeader {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(300px, 0.7fr);
+
+  gap: clamp(30px, 5vw, 72px);
+
+  align-items: end;
+
+  margin-bottom: 30px;
+}
+
+.samTransportHeader small {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #4474cc;
+
+  font-size: 0.74rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.samTransportHeader h4 {
+  margin: 0;
+
+  color: #18222d;
+
+  font-size: clamp(2rem, 4vw, 3.8rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+.samTransportHeader p {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #697684;
+
+  font-size: 0.94rem;
+
+  line-height: 1.72;
+}
+
+
+/* MAIN STAGE */
+
+.samTransportStage {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(250px, 0.5fr);
+
+  border: 1px solid rgba(26, 42, 57, 0.1);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background: #f8fafc;
+
+  box-shadow:
+    0 24px 70px rgba(34, 54, 73, 0.08);
+}
+
+
+/* IMAGE AREA */
+
+.samTransportImageArea {
+  min-width: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(113, 168, 255, 0.11),
+      transparent 48%
+    ),
+    #edf3f8;
+}
+
+.samTransportImageTop {
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 12px 18px;
+
+  border-bottom:
+    1px solid rgba(26, 42, 57, 0.09);
+}
+
+.samTransportImageTop > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.samTransportImageTop span {
+  color: #8090a0;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.12em;
+}
+
+.samTransportImageTop strong {
+  color: #24313e;
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+}
+
+.samTransportImageTop button {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #56708a;
+
+  font-size: 0.76rem;
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.samTransportImageTop button:hover {
+  color: #376bc3;
+
+  transform: translateX(2px);
+}
+
+
+/* SCREENSHOT */
+
+.samTransportImageButton {
+  position: relative;
+
+  width: 100%;
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: clamp(20px, 3.2vw, 48px);
+
+  overflow: hidden;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: zoom-in;
+}
+
+.samTransportImageButton img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 620px;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 55px rgba(28, 50, 72, 0.14);
+
+  transition:
+    transform 420ms
+      cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 420ms ease;
+}
+
+.samTransportImageButton:hover img {
+  transform: scale(1.018);
+
+  box-shadow:
+    0 28px 70px rgba(28, 50, 72, 0.18);
+}
+
+.samTransportImageHint {
+  position: absolute;
+
+  left: 50%;
+  bottom: 24px;
+
+  transform:
+    translate(-50%, 8px);
+
+  padding: 8px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(21, 33, 45, 0.86);
+
+  color: #fff;
+
+  font-size: 0.72rem;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.samTransportImageButton:hover
+  .samTransportImageHint {
+  opacity: 1;
+
+  transform:
+    translate(-50%, 0);
+}
+
+
+/* STORY PANEL */
+
+.samTransportStory {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    clamp(28px, 4vw, 50px);
+
+  border-left:
+    1px solid rgba(26, 42, 57, 0.09);
+
+  background:
+    rgba(255, 255, 255, 0.76);
+}
+
+.samTransportStoryTop {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.samTransportStoryTop span {
+  color: #9aa5af;
+
+  font-size: 0.76rem;
+}
+
+.samTransportStoryTop small {
+  color: #4474cc;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.samTransportStory h5 {
+  max-width: 340px;
+
+  margin: 0 0 14px;
+
+  color: #18222d;
+
+  font-size:
+    clamp(1.45rem, 2.4vw, 2.2rem);
+
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+}
+
+.samTransportStory p {
+  margin: 0;
+
+  color: #687583;
+
+  font-size: 0.9rem;
+
+  line-height: 1.75;
+}
+
+
+/* PROGRESS */
+
+.samTransportProgress {
+  display: grid;
+
+  grid-template-columns:
+    auto minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 32px;
+}
+
+.samTransportProgress span {
+  color: #8b98a4;
+
+  font-size: 0.7rem;
+}
+
+.samTransportProgress > div {
+  position: relative;
+
+  height: 2px;
+
+  overflow: hidden;
+
+  background:
+    rgba(32, 49, 64, 0.1);
+}
+
+.samTransportProgress i {
+  position: absolute;
+
+  inset: 0 auto 0 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7da9ef,
+      #456fc7
+    );
+
+  transition:
+    width 320ms
+      cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* FEATURE SELECTORS */
+
+.samTransportFeatures {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.samTransportFeatures button {
+  position: relative;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    auto minmax(0, 1fr) auto;
+
+  gap: 11px;
+
+  align-items: start;
+
+  padding: 17px 16px;
+
+  border:
+    1px solid rgba(29, 47, 63, 0.1);
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 255, 255, 0.68);
+
+  color: #1f2b36;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.samTransportFeatures button:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(68, 116, 204, 0.24);
+
+  box-shadow:
+    0 10px 30px
+    rgba(50, 75, 98, 0.07);
+}
+
+.samTransportFeatures button.isActive {
+  border-color:
+    rgba(68, 116, 204, 0.34);
+
+  background:
+    rgba(239, 245, 255, 0.92);
+
+  box-shadow:
+    0 12px 34px
+    rgba(50, 79, 115, 0.08);
+}
+
+.samTransportFeatures
+  button:nth-child(3).isActive {
+  transform: translateY(-3px);
+}
+
+.samTransportFeatures > button > span {
+  color: #9ba6b0;
+
+  font-size: 0.7rem;
+}
+
+.samTransportFeatures div {
+  min-width: 0;
+}
+
+.samTransportFeatures small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #6688c5;
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+}
+
+.samTransportFeatures strong {
+  display: block;
+
+  color: #273440;
+
+  font-size: 0.86rem;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+.samTransportFeatures i {
+  color: #8f9ba6;
+
+  font-size: 0.76rem;
+
+  font-style: normal;
+
+  transition:
+    transform 180ms ease,
+    color 180ms ease;
+}
+
+.samTransportFeatures
+  button:hover i,
+.samTransportFeatures
+  button.isActive i {
+  color: #4474cc;
+
+  transform:
+    translate(2px, -2px);
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+.samTransportLightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: grid;
+
+  grid-template-rows:
+    auto minmax(0, 1fr) auto;
+
+  padding: 22px;
+
+  background:
+    rgba(242, 246, 250, 0.97);
+
+  backdrop-filter: blur(18px);
+}
+
+.samTransportLightboxTop {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 24px;
+
+  padding-bottom: 16px;
+}
+
+.samTransportLightboxTop > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.samTransportLightboxTop small {
+  color: #788898;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.12em;
+}
+
+.samTransportLightboxTop strong {
+  color: #1d2935;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+}
+
+.samTransportLightboxTop button {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #697887;
+
+  font-size: 0.78rem;
+
+  cursor: pointer;
+}
+
+.samTransportLightboxTop button:hover {
+  color: #376bc3;
+}
+
+.samTransportLightboxImage {
+  min-height: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  overflow: auto;
+}
+
+.samTransportLightboxImage img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 96vw;
+  max-height: 82vh;
+
+  object-fit: contain;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 26px 80px
+    rgba(31, 51, 70, 0.16);
+
+  animation:
+    samTransportLightboxEnter
+    360ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes samTransportLightboxEnter {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.975)
+      translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+.samTransportLightboxBottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding-top: 16px;
+}
+
+.samTransportLightboxBottom span {
+  color: #4474cc;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+.samTransportLightboxBottom p {
+  margin: 0;
+
+  color: #687684;
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .samTransportStage {
+    grid-template-columns: 1fr;
+  }
+
+  .samTransportStory {
+    border-left: 0;
+
+    border-top:
+      1px solid rgba(26, 42, 57, 0.09);
+  }
+
+  .samTransportFeatures {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .samTransportHeader {
+    grid-template-columns: 1fr;
+  }
+
+  .samTransportImageButton {
+    min-height: 400px;
+
+    padding: 14px;
+  }
+
+  .samTransportImageHint {
+    display: none;
+  }
+
+  .samTransportLightbox {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .samTransportFeatures {
+    grid-template-columns: 1fr;
+  }
+
+  .samTransportImageButton {
+    min-height: 320px;
+  }
+
+  .samTransportLightboxBottom p {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .samTransportImageButton img,
+  .samTransportFeatures button,
+  .samTransportFeatures i,
+  .samTransportProgress i,
+  .samTransportLightboxImage img {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* =========================================================
+   SAM INTERNSHIP — FINAL ALIGNMENT
+   ========================================================= */
+
+.samSpotlightCurrentInternship {
+  display: block;
+}
+
+.samSpotlightCurrentInternship .samSpotlightCopy {
+  padding-bottom: 0;
+}
+
+.samSpotlightCurrentInternship .samTransport {
+  padding-left: clamp(24px, 4vw, 52px);
+  padding-right: clamp(24px, 4vw, 52px);
+  padding-bottom: clamp(38px, 5vw, 64px);
+}
+
+
+/* Match TeleCardio intro rhythm */
+
+.samTransport {
+  margin-top: 48px;
+  padding-top: 38px;
+}
+
+.samTransportHeader {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.samTransportHeader > div {
+  max-width: 720px;
+}
+
+.samTransportHeader small {
+  margin-bottom: 10px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.samTransportHeader h4 {
+  max-width: 720px;
+  margin: 0 0 13px;
+
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.samTransportHeader p {
+  max-width: 640px;
+  margin: 0;
+
+  font-size: 0.92rem;
+  line-height: 1.72;
+}
+
+
+/* Main project view */
+
+.samTransportStage {
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(300px, 0.65fr);
+}
+
+.samTransportImageButton {
+  min-height: 470px;
+  padding: 20px;
+}
+
+.samTransportImageButton img {
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 520px;
+
+  object-fit: contain;
+}
+
+.samTransportStory {
+  padding: clamp(28px, 3vw, 38px);
+}
+
+.samTransportStory h5 {
+  max-width: 280px;
+
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+  line-height: 1.06;
+}
+
+.samTransportStory p {
+  max-width: 360px;
+  font-size: 0.9rem;
+}
+
+
+/* Responsive */
+
+@media (max-width: 980px) {
+  .samTransportStage {
+    grid-template-columns: 1fr;
+  }
+
+  .samTransportStory {
+    border-left: 0;
+    border-top: 1px solid rgba(26, 42, 57, 0.09);
+  }
+
+  .samTransportStory h5,
+  .samTransportStory p {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 720px) {
+  .samSpotlightCurrentInternship .samTransport {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .samTransportHeader {
+    margin-bottom: 32px;
+  }
+
+  .samTransportImageButton {
+    min-height: 360px;
+    padding: 12px;
+  }
+}

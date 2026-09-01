@@ -37,12 +37,18 @@ export const projects: Project[] = [
     status: "placeholder",
   },
   {
-    title: "Internship Project",
+    title: "Public Transport Tracker & Route Planner",
     category: "internship",
     summary:
-      "Samantha's strongest permitted internship project will replace this placeholder after the source material is reviewed.",
-    stack: ["[Actual stack]"],
-    status: "placeholder",
+      "A public transport web application that combines live vehicle tracking, location search and journey planning into one connected experience using public GTFS transport data.",
+    stack: [
+      "Svelte",
+      "Vite",
+      "Node.js",
+      "GTFS Data",
+      "Public APIs",
+    ],
+    status: "complete",
   },
   {
     title: "TeleCardio",

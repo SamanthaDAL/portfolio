@@ -9,6 +9,7 @@ import {
 } from "@/data/projects";
 
 import SamanthaFypImplementation from "./SamanthaFypImplementation";
+import SamanthaPublicTransport from "./SamanthaPublicTransport";
 
 const order: ProjectCategory[] = [
   "personal-portfolio",
@@ -111,16 +112,19 @@ export default function SamanthaProjectSpotlight({
         <article
           className={`samSpotlightCurrent ${current.category === "fyp"
               ? "samSpotlightCurrentFyp"
-              : ""
+              : current.category === "internship"
+                ? "samSpotlightCurrentInternship"
+                : ""
             }`}
         >
-          {current.category !== "fyp" && (
-            <div className="samSpotlightVisual">
-              <div className="samSpotlightWindow">
-                <div className="samSpotlightWindowBar">
-                  <i />
-                  <i />
-                  <i />
+          {current.category !== "fyp" &&
+            current.category !== "internship" && (
+              <div className="samSpotlightVisual">
+                <div className="samSpotlightWindow">
+                  <div className="samSpotlightWindowBar">
+                    <i />
+                    <i />
+                    <i />
                   <span>PROJECT PREVIEW</span>
                 </div>
 
@@ -170,13 +174,18 @@ export default function SamanthaProjectSpotlight({
             <SamanthaFypImplementation />
           )}
 
-          {current.category !== "fyp" && (
-            <div className="samSpotlightFooter">
-              <span>
-                Case study, screenshots and links will be added later.
-              </span>
-            </div>
+          {current.category === "internship" && (
+            <SamanthaPublicTransport />
           )}
+
+          {current.category !== "fyp" &&
+            current.category !== "internship" && (
+              <div className="samSpotlightFooter">
+                <span>
+                  Case study, screenshots and links will be added later.
+                </span>
+              </div>
+            )}
         </article>
 
         {items.length > 1 && (

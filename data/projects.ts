@@ -57,7 +57,7 @@ export const projects: Project[] = [
       "Firebase Storage",
     ],
     status: "complete",
-    featured: true,
+    // featured: true,
   },
   {
     title: "University Project A",

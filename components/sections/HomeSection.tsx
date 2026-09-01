@@ -1,11 +1,12 @@
 import Icon from "@/components/ui/Icon";
 import { site } from "@/data/site";
+import { profile } from "@/data/site";
 
 export default function HomeSection() {
   return (
     <section id="home" className="samSection samHero">
       <div className="samHeroGrid">
-        <div className="samHeroCopy">
+        {/* <div className="samHeroCopy">
           <span className="samLabel">01 / HOME</span>
           <h1>Hi, I&apos;m {site.displayName}.<span>I build clear, useful software.</span></h1>
           <p>{site.summary}</p>
@@ -20,17 +21,117 @@ export default function HomeSection() {
             <a href={site.github}><Icon name="github" size={16}/> GitHub</a>
             <a href={site.linkedin}><Icon name="linkedin" size={16}/> LinkedIn</a>
           </div>
+        </div> */}
+
+        <div className="samHeroCopy">
+          <span className="samLabel">01 / HOME</span>
+          <span className="samLabel">
+            {profile.roles.join(" · ")}
+          </span>
+
+          <h1>
+            {profile.professionalName}
+            <span>{profile.legalName}</span>
+          </h1>
+
+          <p>
+            {profile.positioning}
+          </p>
+
+          <p className="samHeroStatus">
+            {profile.statusLine}
+          </p>
+
+          <div className="samActions">
+            <a
+              className="samPrimary"
+              href="#projects"
+            >
+              {profile.primaryCta}
+            </a>
+
+            <a
+              className="samSecondary"
+              href="#resume"
+            >
+              {profile.secondaryCta}
+            </a>
+          </div>
+
+          <div className="samSocialRow">
+            <a href={`mailto:${profile.email}`}>
+              Email
+            </a>
+
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
 
-        <aside className="samHeroCard">
+        {/* <aside className="samHeroCard">
           <div className="samHeroCardHead"><span>PORTFOLIO SNAPSHOT</span><span>2026</span></div>
           <div className="samSnapshotRows">
-            <div><Icon name="briefcase" size={20}/><span>Experience</span><strong>6-month internship</strong></div>
-            <div><Icon name="graduation" size={20}/><span>FYP</span><strong>Mobile application</strong></div>
-            <div><Icon name="book" size={20}/><span>University</span><strong>Selected projects</strong></div>
+            <div><Icon name="briefcase" size={20} /><span>Experience</span><strong>6-month internship</strong></div>
+            <div><Icon name="graduation" size={20} /><span>FYP</span><strong>Mobile application</strong></div>
+            <div><Icon name="book" size={20} /><span>University</span><strong>Selected projects</strong></div>
           </div>
           <p>Real project screenshots will replace this simple content preview later.</p>
-        </aside>
+        </aside> */}
+        <div className="samHeroCard">
+          <div className="samHeroCardHead">
+            <span>PROFILE SNAPSHOT</span>
+            <span>2026</span>
+          </div>
+
+          <div className="samHomeFacts">
+            <div>
+              <small>STATUS</small>
+
+              <strong>
+                {profile.currentStatus}
+              </strong>
+            </div>
+
+            <div>
+              <small>LOCATION</small>
+
+              <strong>
+                Selangor / Kuala Lumpur
+              </strong>
+
+              <p>
+                Prefer Kajang MRT Line / Petaling Jaya
+              </p>
+            </div>
+
+            <div>
+              <small>FOCUS</small>
+
+              <strong>
+                Software · Frontend · Web
+              </strong>
+            </div>
+          </div>
+
+          <p>
+            Interested in practical development work
+            that combines clear interfaces, thoughtful
+            user experience and reliable functionality.
+          </p>
+        </div>
       </div>
     </section>
   );

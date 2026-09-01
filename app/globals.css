@@ -3482,3 +3482,55 @@ body {
     padding: 12px;
   }
 }
+
+/* Samantha Home — real profile content */
+
+.samHeroStatus {
+  max-width: 680px;
+
+  margin: 18px 0 0 !important;
+
+  color: #7c858b !important;
+
+  font-size: 0.86rem !important;
+}
+
+.samHomeFacts {
+  display: grid;
+}
+
+.samHomeFacts > div {
+  padding: 19px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.samHomeFacts small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #818a90;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.1em;
+}
+
+.samHomeFacts strong {
+  display: block;
+
+  color: var(--ink);
+
+  font-size: 1rem;
+}
+
+.samHomeFacts p {
+  margin: 4px 0 0;
+
+  color: #7b848a;
+
+  font-size: 0.8rem;
+
+  line-height: 1.55;
+}

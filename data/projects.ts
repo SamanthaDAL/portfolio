@@ -19,6 +19,13 @@ export const categoryLabels: Record<ProjectCategory, string> = {
   university: "University / Course",
 };
 
+export const categoryEnabled: Record<ProjectCategory, boolean> = {
+  "personal-portfolio": false,
+  internship: true,
+  fyp: true,
+  university: false,
+};
+
 export const projects: Project[] = [
   {
     title: "Future Personal Project A",

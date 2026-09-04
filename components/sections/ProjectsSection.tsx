@@ -7,10 +7,12 @@ export default function ProjectsSection() {
       <div className="samSectionHead">
         <span className="samLabel">02 / PROJECTS</span>
         <div>
-          <h2>One project in focus, with context around it.</h2>
+          <h2>Projects shaped by users, flows and functionality.</h2>
+
           <p>
-            Choose a category and browse its projects. The current project stays centered,
-            while the previous and next projects appear as smaller supporting previews.
+            Explore selected work from my internship and final year project,
+            including the development process, technical implementation and
+            application workflows behind each project.
           </p>
         </div>
       </div>

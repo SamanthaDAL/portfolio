@@ -2,7 +2,14 @@
 
 import { useMemo, useState } from "react";
 import Icon, { type IconName } from "@/components/ui/Icon";
+// import {
+//   categoryLabels,
+//   type Project,
+//   type ProjectCategory,
+// } from "@/data/projects";
+
 import {
+  categoryEnabled,
   categoryLabels,
   type Project,
   type ProjectCategory,
@@ -17,6 +24,10 @@ const order: ProjectCategory[] = [
   "fyp",
   "university",
 ];
+
+const visibleOrder = order.filter(
+  (category) => categoryEnabled[category]
+);
 
 const icons: Record<ProjectCategory, IconName> = {
   "personal-portfolio": "code",
@@ -37,16 +48,22 @@ export default function SamanthaProjectSpotlight({
 }) {
   const groups = useMemo(
     () =>
-      order.map((category) => ({
+      visibleOrder.map((category) => ({
         category,
         label: categoryLabels[category],
-        projects: allProjects.filter((project) => project.category === category),
+        projects: allProjects.filter(
+          (project) => project.category === category
+        ),
       })),
     [allProjects]
   );
 
-  const [category, setCategory] =
-    useState<ProjectCategory>("personal-portfolio");
+  // const [category, setCategory] =
+  //   useState<ProjectCategory>("personal-portfolio");
+
+  const [category, setCategory] = useState<ProjectCategory>(
+    visibleOrder[0] ?? "internship"
+  );
 
   const [indexes, setIndexes] = useState<Record<ProjectCategory, number>>({
     "personal-portfolio": 0,

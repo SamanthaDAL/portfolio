@@ -580,46 +580,6 @@ button {
   margin-bottom: 8px
 }
 
-.samAboutGrid {
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 16px
-}
-
-.samAboutGrid article {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: clamp(23px, 3.5vw, 42px);
-  min-height: 205px
-}
-
-.samAboutGrid svg {
-  color: var(--accent);
-  margin-bottom: 22px
-}
-
-.samAboutGrid article>span {
-  display: block;
-  color: #778087;
-  font-size: .68rem;
-  margin-bottom: 5px
-}
-
-.samAboutGrid h3 {
-  font-size: 1.45rem;
-  margin: 0 0 8px
-}
-
-.samAboutGrid p {
-  color: var(--muted);
-  line-height: 1.68
-}
-
-.samAboutMain {
-  grid-row: span 2
-}
-
 .samResumeGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -826,17 +786,12 @@ button {
   .samContributions {
     grid-template-columns: 1fr
   }
-
-  .samAboutGrid,
+  
   .samResumeGrid,
   .samContactGrid {
     grid-template-columns: 1fr
   }
-
-  .samAboutMain {
-    grid-row: auto
   }
-}
 
 @media(max-width:430px) {
   :root {
@@ -1139,96 +1094,742 @@ button {
   font-size: .72rem;
 }
 
-.samAboutIntro {
-  max-width: 900px
+/* =========================================================
+   SAMANTHA ABOUT — CLEAN DEVELOPER PROFILE
+   ========================================================= */
+
+.samAboutSimple {
+  overflow: hidden;
 }
 
-.samAboutIntro h2 {
-  font-size: clamp(3rem, 5.5vw, 5.4rem);
-  letter-spacing: -.055em;
-  line-height: .98;
-  margin: 0 0 20px;
-}
 
-.samAboutIntro>p {
-  font-size: 1.03rem;
-  line-height: 1.75;
-  color: var(--muted);
-  max-width: 780px
-}
+/* =========================================================
+   INTRO
+   ========================================================= */
 
-.samAboutPlaceholder {
-  color: #7d858a !important
-}
-
-.samAboutDivider {
-  height: 1px;
-  background: var(--line);
-  margin: 58px 0 0
-}
-
-.samAboutRows {
-  display: grid
-}
-
-.samAboutRow {
+.samAboutTop {
   display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 28px;
-  padding: 30px 0;
-  border-bottom: 1px solid var(--line);
-}
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(300px, .65fr);
 
-.samAboutRowTitle {
-  display: flex;
-  gap: 9px;
+  gap: clamp(48px, 7vw, 96px);
   align-items: center;
-  color: var(--accent)
 }
 
-.samAboutRowTitle span {
-  font-size: .62rem;
-  letter-spacing: .1em;
-  font-weight: 800
-}
-
-.samAboutRow h3 {
-  font-size: 1.5rem;
-  margin: 0 0 5px
-}
-
-.samAboutRow p {
-  color: var(--muted);
-  margin: 4px 0
-}
-
-.samAboutRow small {
-  color: #858d91
-}
-
-.samToolkitPills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-content: flex-start
-}
-
-.samAboutTwoCol>div:last-child {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.samAboutTwoCol>div {
+.samAboutCopy {
   min-width: 0;
 }
 
-.samAboutTwoCol {
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+.samAboutCopy h2 {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: .97;
+  letter-spacing: -.055em;
 }
 
-.samAboutTwoCol>.samAboutRowTitle {
-  display: none
+.samAboutLead {
+  max-width: 760px;
+
+  margin: 28px 0 0;
+
+  color: #424b50;
+
+  font-size: 1.03rem;
+  line-height: 1.78;
+}
+
+.samAboutSummary {
+  max-width: 760px;
+
+  margin: 18px 0 0;
+
+  color: var(--muted);
+
+  font-size: .92rem;
+  line-height: 1.72;
+}
+
+
+/* Development preference */
+
+.samAboutPreference {
+  max-width: 720px;
+
+  margin-top: 28px;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--line);
+}
+
+.samAboutPreference small {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--warm);
+
+  font-size: .66rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+
+.samAboutPreference p {
+  margin: 0;
+
+  color: #656e73;
+
+  font-size: .86rem;
+  line-height: 1.7;
+}
+
+
+/* Education */
+
+.samAboutEducation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+
+  gap: 36px;
+
+  margin-top: 32px;
+  padding-top: 22px;
+
+  border-top: 1px solid var(--line);
+}
+
+.samAboutEducation small {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #899095;
+
+  font-size: .64rem;
+  letter-spacing: .11em;
+}
+
+.samAboutEducation strong {
+  display: block;
+
+  max-width: 570px;
+
+  font-size: .9rem;
+  line-height: 1.48;
+}
+
+.samAboutEducation span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #7c858a;
+
+  font-size: .76rem;
+}
+
+.samAboutEducation .samAboutCgpa {
+  color: var(--accent);
+
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
+
+/* Portrait */
+
+.samAboutPortrait {
+  min-width: 0;
+  margin: 0;
+}
+
+.samAboutPortrait > div {
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: var(--accentSoft);
+}
+
+.samAboutPortrait img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.samAboutPortrait figcaption {
+  display: flex;
+  align-items: baseline;
+
+  gap: 7px;
+
+  padding-top: 11px;
+}
+
+.samAboutPortrait figcaption strong {
+  font-size: .84rem;
+}
+
+.samAboutPortrait figcaption span {
+  color: #858d91;
+
+  font-size: .7rem;
+}
+
+
+/* =========================================================
+   SHARED BLOCK
+   ========================================================= */
+
+.samAboutBlock {
+  padding-top: clamp(68px, 7vw, 96px);
+}
+
+.samAboutBlockHead {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+
+  gap: 28px;
+
+  align-items: baseline;
+
+  margin-bottom: 28px;
+}
+
+.samAboutBlockHead small {
+  color: var(--accent);
+
+  font-size: .66rem;
+  font-weight: 750;
+
+  letter-spacing: .12em;
+}
+
+.samAboutBlockHead h3 {
+  margin: 0;
+
+  font-size: clamp(1.9rem, 2.8vw, 2.8rem);
+  line-height: 1;
+
+  letter-spacing: -.04em;
+}
+
+
+/* =========================================================
+   HOW I WORK
+   ========================================================= */
+
+.samAboutWorkGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.samAboutWorkGrid article {
+  min-width: 0;
+
+  padding: 27px 26px;
+
+  border-right: 1px solid var(--line);
+}
+
+.samAboutWorkGrid article:first-child {
+  padding-left: 0;
+}
+
+.samAboutWorkGrid article:last-child {
+  border-right: 0;
+}
+
+.samAboutWorkGrid strong {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: .94rem;
+}
+
+.samAboutWorkGrid p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: .84rem;
+  line-height: 1.68;
+}
+
+.samAboutEnjoy {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+
+  gap: 28px;
+
+  margin-top: 22px;
+}
+
+.samAboutEnjoy small {
+  color: #899095;
+
+  font-size: .64rem;
+  letter-spacing: .11em;
+}
+
+.samAboutEnjoy p {
+  margin: 0;
+
+  color: #454e53;
+
+  font-size: .86rem;
+}
+
+.samAboutEnjoy span {
+  grid-column: 2;
+
+  color: #828a8f;
+
+  font-size: .78rem;
+}
+
+
+/* =========================================================
+   TECHNICAL SKILLS
+   ========================================================= */
+
+.samAboutSkillList {
+  border-top: 1px solid var(--line);
+}
+
+.samAboutSkillRow {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+
+  gap: 28px;
+
+  padding: 21px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.samAboutSkillRow > strong {
+  color: #687176;
+
+  font-size: .68rem;
+  letter-spacing: .1em;
+}
+
+.samAboutSkillRow > div {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px 22px;
+}
+
+.samAboutSkillRow span {
+  color: var(--ink);
+
+  font-size: .86rem;
+}
+
+
+/* =========================================================
+   REFLECTIONS
+   ========================================================= */
+
+.samAboutStoryList {
+  border-top: 1px solid var(--line);
+}
+
+.samAboutStoryList article {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+
+  gap: 28px;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.samAboutStoryList article > div:first-child small {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--accent);
+
+  font-size: .64rem;
+  letter-spacing: .11em;
+}
+
+.samAboutStoryList article > div:first-child strong {
+  font-size: .86rem;
+}
+
+.samAboutStoryList h4 {
+  margin: 0 0 11px;
+
+  font-size: 1.15rem;
+  letter-spacing: -.02em;
+}
+
+.samAboutStoryList p {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: .86rem;
+  line-height: 1.72;
+}
+
+
+/* Recruiter note */
+
+.samAboutRecruiterNote {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+
+  gap: 28px;
+
+  margin-top: 24px;
+  padding: 24px 26px;
+
+  border-radius: 14px;
+
+  background: var(--warmSoft);
+}
+
+.samAboutRecruiterNote small {
+  color: #a26d55;
+
+  font-size: .64rem;
+  letter-spacing: .11em;
+}
+
+.samAboutRecruiterNote p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #665d58;
+
+  font-size: .85rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   RECOGNITION
+   ========================================================= */
+
+.samAboutRecognition {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: clamp(36px, 5vw, 72px);
+
+  padding-top: 28px;
+
+  border-top: 1px solid var(--line);
+}
+
+.samAboutRecognition article {
+  min-width: 0;
+
+  padding-bottom: 24px;
+}
+
+.samAboutRecognition small {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--accent);
+
+  font-size: .64rem;
+  letter-spacing: .11em;
+}
+
+.samAboutRecognition h4 {
+  margin: 0;
+
+  font-size: 1.15rem;
+}
+
+.samAboutRecognition p {
+  margin: 5px 0 0;
+
+  color: #767f84;
+
+  font-size: .82rem;
+}
+
+.samAboutRecognition span {
+  display: block;
+
+  margin-top: 9px;
+
+  color: var(--muted);
+
+  font-size: .8rem;
+  line-height: 1.55;
+}
+
+.samAboutRecognition > article > strong {
+  display: block;
+
+  margin-top: 14px;
+
+  color: var(--warm);
+
+  font-size: .72rem;
+}
+
+
+/* =========================================================
+   LANGUAGES + INTERESTS
+   ========================================================= */
+
+.samAboutLanguageGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.samAboutLanguageGrid article {
+  min-width: 0;
+
+  padding: 22px;
+
+  border-right: 1px solid var(--line);
+}
+
+.samAboutLanguageGrid article:first-child {
+  padding-left: 0;
+}
+
+.samAboutLanguageGrid article:last-child {
+  border-right: 0;
+}
+
+.samAboutLanguageGrid strong {
+  display: block;
+
+  font-size: .9rem;
+}
+
+.samAboutLanguageGrid span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--accent);
+
+  font-size: .7rem;
+}
+
+.samAboutLanguageGrid p {
+  margin: 8px 0 0;
+
+  color: #7c858a;
+
+  font-size: .74rem;
+  line-height: 1.5;
+}
+
+.samAboutInterestLine {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+
+  gap: 28px;
+
+  padding-top: 22px;
+}
+
+.samAboutInterestLine small {
+  color: #899095;
+
+  font-size: .64rem;
+  letter-spacing: .11em;
+}
+
+.samAboutInterestLine p {
+  margin: 0;
+
+  color: #5d666b;
+
+  font-size: .82rem;
+}
+
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+.samAboutCertList {
+  border-top: 1px solid var(--line);
+}
+
+.samAboutCertList > a {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) auto;
+
+  gap: 20px;
+
+  align-items: center;
+
+  padding: 19px 0;
+
+  border-bottom: 1px solid var(--line);
+
+  transition:
+    padding-left 180ms ease,
+    color 180ms ease;
+}
+
+.samAboutCertList > a:hover {
+  padding-left: 6px;
+
+  color: var(--accent);
+}
+
+.samAboutCertList small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #858d91;
+
+  font-size: .66rem;
+}
+
+.samAboutCertList strong {
+  display: block;
+
+  font-size: .88rem;
+
+  line-height: 1.4;
+}
+
+.samAboutCertList span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #949b9e;
+
+  font-size: .68rem;
+}
+
+.samAboutCertList svg {
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:900px) {
+  .samAboutTop {
+    grid-template-columns: 1fr;
+  }
+
+  .samAboutPortrait {
+    max-width: 430px;
+  }
+
+  .samAboutWorkGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .samAboutWorkGrid article {
+    padding-left: 0;
+
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .samAboutWorkGrid article:last-child {
+    border-bottom: 0;
+  }
+
+  .samAboutLanguageGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .samAboutLanguageGrid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .samAboutLanguageGrid article:nth-child(3),
+  .samAboutLanguageGrid article:nth-child(4) {
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media(max-width:620px) {
+  .samAboutCopy h2 {
+    font-size:
+      clamp(2.8rem, 14vw, 4.3rem);
+  }
+
+  .samAboutEducation {
+    grid-template-columns: 1fr;
+  }
+
+  .samAboutBlockHead,
+  .samAboutEnjoy,
+  .samAboutSkillRow,
+  .samAboutStoryList article,
+  .samAboutRecruiterNote,
+  .samAboutInterestLine {
+    grid-template-columns: 1fr;
+  }
+
+  .samAboutEnjoy span {
+    grid-column: auto;
+  }
+
+  .samAboutRecognition {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .samAboutLanguageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .samAboutLanguageGrid article {
+    padding-left: 0;
+
+    border-right: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .samAboutLanguageGrid article:first-child {
+    border-top: 0;
+  }
 }
 
 .samResumeList {
@@ -1275,64 +1876,241 @@ button {
   font-size: .72rem
 }
 
+/* =========================================================
+   SAMANTHA CONTACT
+   ========================================================= */
+
 .samContactStory {
-  padding-bottom: 55px
+  padding-bottom: 55px;
 }
+
+
+/* Main layout */
 
 .samContactStoryGrid {
   display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: clamp(40px, 8vw, 120px);
-  align-items: end;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(360px, 0.85fr);
+
+  gap: clamp(64px, 9vw, 140px);
+
+  align-items: center;
 }
+
+
+/* Left intro */
 
 .samContactStory h2 {
-  font-size: clamp(3.8rem, 7vw, 7rem);
-  letter-spacing: -.065em;
-  line-height: .9;
   margin: 0;
+
+  font-size: clamp(3.8rem, 7vw, 7rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -0.065em;
 }
 
-.samContactStoryGrid>div:first-child>p {
-  color: var(--muted);
+.samContactStoryGrid > div:first-child > p {
   max-width: 650px;
-  line-height: 1.72;
-  margin: 24px 0;
+
+  margin: 30px 0 0;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.75;
 }
+
+
+/* Availability */
+
+.samContactAvailability {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 5px;
+
+  margin-top: 32px;
+}
+
+.samContactAvailability small {
+  display: block;
+
+  color: #7c858b;
+
+  font-size: 0.68rem;
+  font-weight: 650;
+
+  letter-spacing: 0.12em;
+}
+
+.samContactAvailability strong {
+  display: block;
+
+  color: var(--ink);
+
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+
+/* Main email CTA */
 
 .samContactEmail {
   display: inline-flex;
+
   align-items: center;
-  gap: 8px;
-  background: var(--ink);
-  color: white;
+
+  gap: 9px;
+
+  margin-top: 18px;
+
+  padding: 12px 16px;
+
   border-radius: 10px;
-  padding: 12px 15px;
-  font-size: .78rem;
+
+  background: var(--ink);
+
+  color: white;
+
+  font-size: 0.8rem;
   font-weight: 720;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
+
+.samContactEmail:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(27, 32, 37, 0.12);
+}
+
+
+/* Right-side links */
 
 .samContactLinks {
-  border-top: 1px solid var(--line)
+  border-top:
+    1px solid var(--line);
 }
 
-.samContactLinks>a,
-.samContactLinks>div {
+.samContactLinks > a {
+  min-height: 82px;
+
   display: grid;
-  grid-template-columns: 30px 1fr auto;
+
+  grid-template-columns:
+    30px minmax(0, 1fr) auto;
+
+  gap: 18px;
+
   align-items: center;
-  gap: 10px;
-  padding: 17px 0;
-  border-bottom: 1px solid var(--line);
+
+  padding: 18px 0;
+
+  border-bottom:
+    1px solid var(--line);
+
   color: #424a50;
+
+  transition:
+    color 180ms ease,
+    padding-left 180ms ease;
 }
 
-.samContactLinks svg:first-child {
-  color: var(--accent)
+.samContactLinks > a:hover {
+  padding-left: 6px;
+
+  color: var(--accent);
 }
 
-.samContactLinks span {
-  font-size: .85rem
+
+/* First icon */
+
+.samContactLinks > a > svg:first-child {
+  color: var(--accent);
+}
+
+
+/* Arrow */
+
+.samContactLinks > a > svg:last-child {
+  color: #747d82;
+}
+
+
+/* Label + description */
+
+.samContactLinks > a > span {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  color: var(--ink);
+
+  font-size: 0.9rem;
+
+  line-height: 1.35;
+}
+
+.samContactLinks > a > span small {
+  display: block;
+
+  color: #7f888d;
+
+  font-size: 0.65rem;
+  font-weight: 650;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .samContactStoryGrid {
+    grid-template-columns: 1fr;
+
+    gap: 54px;
+  }
+
+  .samContactLinks {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 620px) {
+  .samContactStory h2 {
+    font-size:
+      clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .samContactStoryGrid {
+    gap: 42px;
+  }
+
+  .samContactLinks > a {
+    min-height: 74px;
+
+    grid-template-columns:
+      26px minmax(0, 1fr) auto;
+
+    gap: 13px;
+  }
 }
 
 @media(max-width:900px) {
@@ -1367,14 +2145,6 @@ button {
     bottom: -6px
   }
 
-  .samAboutRow {
-    grid-template-columns: 1fr
-  }
-
-  .samAboutTwoCol {
-    grid-template-columns: 1fr 1fr
-  }
-
   .samResumeList article {
     grid-template-columns: 50px 1fr
   }
@@ -1398,10 +2168,6 @@ button {
     grid-column: 2
   }
 
-  .samAboutTwoCol {
-    grid-template-columns: 1fr;
-    gap: 26px
-  }
 
   .samResumeList article {
     grid-template-columns: 1fr
@@ -3534,3 +4300,4 @@ body {
 
   line-height: 1.55;
 }
+
